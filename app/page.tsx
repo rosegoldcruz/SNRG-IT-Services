@@ -28,67 +28,57 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black pt-32 pb-20 md:pt-40 md:pb-24">
-        <div className="container mx-auto px-4">
-          <Card className="w-full bg-black/[0.96] relative overflow-hidden border border-white/10 rounded-2xl">
-            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
+      <section className="relative min-h-screen overflow-hidden bg-black pt-28 md:pt-32">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/hero-video-poster.jpg"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/35" />
 
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center p-6 md:p-10 lg:p-12">
-              {/* Left content */}
-              <div className="relative z-10 flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
-                  The Infrastructure of Zero Downtime.
-                </h1>
-                <p className="mt-4 text-neutral-300 max-w-lg">
-                  Deploying AI-driven security and cloud-native management to protect and scale professional firms.
-                </p>
+        <div className="relative z-10 container mx-auto px-4 min-h-[calc(100vh-7rem)] flex items-center">
+          <div className="max-w-2xl">
+            <Spotlight className="-top-40 left-0 md:left-40 md:-top-20" />
+            <h1 className="text-4xl md:text-6xl font-bold text-white bg-gradient-to-b from-neutral-50 to-neutral-300 bg-clip-text text-transparent">
+              The Infrastructure of Zero Downtime.
+            </h1>
+            <p className="mt-5 text-lg text-neutral-200 max-w-xl">
+              Deploying AI-driven security and cloud-native management to protect and scale professional firms.
+            </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                  <Button size="lg" className="bg-white text-black hover:bg-gray-100">
-                    Schedule Infrastructure Audit
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-neutral-600 text-neutral-300 hover:bg-neutral-800 bg-transparent"
-                  >
-                    View Managed Support Plans
-                  </Button>
-                </div>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+                Schedule Infrastructure Audit
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-neutral-500 text-white hover:bg-black/40 bg-transparent"
+              >
+                View Managed Support Plans
+              </Button>
+            </div>
 
-                <div className="flex items-center gap-8 text-sm text-neutral-400 mt-6">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-400" />
-                    <span>24/7 AI Monitoring</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-400" />
-                    <span>Uptime-First SLA Coverage</span>
-                  </div>
-                </div>
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-neutral-200 mt-6">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-400" />
+                <span>24/7 AI Monitoring</span>
               </div>
-
-              {/* Right content */}
-              <div className="relative flex items-center justify-center">
-                <div className="relative w-full aspect-[16/10] rounded-2xl border border-white/10 overflow-hidden bg-black">
-                  <video
-                    className="h-full w-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster="/hero-video-poster.jpg"
-                  >
-                    <source src="/hero-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/20" />
-                </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-400" />
+                <span>Uptime-First SLA Coverage</span>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
