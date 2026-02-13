@@ -30,19 +30,53 @@ const AnimatedNavLink = ({ href, children }: { href: string; children: React.Rea
 }
 
 const ServicesDropdown = () => {
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick)
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick)
+    }
+  }, [])
+
   return (
-    <div className="group relative">
-      <button className="flex items-center gap-1 text-sm text-gray-300 hover:text-white transition-colors" aria-label="Open services menu">
+    <div
+      ref={dropdownRef}
+      className="relative"
+      onMouseEnter={() => setIsServicesOpen(true)}
+      onMouseLeave={() => setIsServicesOpen(false)}
+    >
+      <button
+        className="flex items-center gap-1 text-sm text-gray-300 hover:text-white transition-colors"
+        aria-label="Open services menu"
+        aria-expanded={isServicesOpen}
+        aria-haspopup="menu"
+        onClick={() => setIsServicesOpen((prev) => !prev)}
+      >
         <span>Services</span>
-        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
       </button>
 
-      <div className="invisible opacity-0 translate-y-1 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto absolute left-0 top-full mt-3 w-72 rounded-lg border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl z-50 transition-all duration-200">
+      <div
+        className={`absolute left-0 top-full mt-3 w-72 rounded-lg border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl z-50 transition-all duration-200 ${
+          isServicesOpen
+            ? "visible opacity-100 translate-y-0 pointer-events-auto"
+            : "invisible opacity-0 translate-y-1 pointer-events-none"
+        }`}
+      >
         {SERVICES.map((service) => (
           <Link
             key={service.href}
             href={service.href}
             className="block rounded-md px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all"
+            onClick={() => setIsServicesOpen(false)}
           >
             {service.name}
           </Link>
