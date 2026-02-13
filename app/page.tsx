@@ -213,11 +213,11 @@ export default function HomePage() {
                   <div className="flex text-yellow-400">{"★".repeat(5)}</div>
                   <p className="text-gray-300">
                     "Since SNRG Labs took over our infrastructure, we haven’t had a single unplanned outage. Our
-                    legal team finally has peace of mind before every filing deadline."
+                    team finally has peace of mind before every filing deadline."
                   </p>
                   <div>
                     <p className="font-semibold text-white">Alex Martinez</p>
-                    <p className="text-sm text-gray-400">Managing Partner, Apex Legal Group</p>
+                    <p className="text-sm text-gray-400">Managing Partner, Boutique Litigation Firm</p>
                   </div>
                 </div>
               </CardContent>
@@ -229,11 +229,11 @@ export default function HomePage() {
                   <div className="flex text-yellow-400">{"★".repeat(5)}</div>
                   <p className="text-gray-300">
                     "Their proactive monitoring caught a storage failure before it disrupted patient scheduling. We
-                    trust them with every critical system in our clinic."
+                    trust them with every critical system in our practice."
                   </p>
                   <div>
                     <p className="font-semibold text-white">Dr. Rachel Nguyen</p>
-                    <p className="text-sm text-gray-400">Director, Desert Valley Medical</p>
+                    <p className="text-sm text-gray-400">Director of Operations, Multi-State Specialty Clinic</p>
                   </div>
                 </div>
               </CardContent>
@@ -244,12 +244,12 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="flex text-yellow-400">{"★".repeat(5)}</div>
                   <p className="text-gray-300">
-                    "We moved from constant IT fire drills to stable, secure operations. SNRG Labs gives our finance
-                    team the confidence to operate at full speed."
+                    "We moved from constant IT fire drills to stable, secure operations. SNRG gives our team the
+                    confidence to operate at full speed."
                   </p>
                   <div>
                     <p className="font-semibold text-white">Jordan Patel</p>
-                    <p className="text-sm text-gray-400">COO, Summit Financial Advisors</p>
+                    <p className="text-sm text-gray-400">CTO, Regional Manufacturing Group</p>
                   </div>
                 </div>
               </CardContent>
