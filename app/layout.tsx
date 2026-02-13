@@ -9,22 +9,27 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'SNRG Labs | Elite Managed IT & Infrastructure',
   description: 'Enterprise-grade managed security, cloud orchestration, and proactive infrastructure management for zero downtime operations.',
+  manifest: '/manifest.webmanifest',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/snrg.svg', type: 'image/svg+xml' },
     ],
-    apple: '/apple-icon.png',
+    shortcut: ['/favicon.ico'],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    other: [{ rel: 'mask-icon', url: '/snrg.svg', color: '#000000' }],
+  },
+  other: {
+    'msapplication-config': '/browserconfig.xml',
+    'msapplication-TileColor': '#000000',
+    'msapplication-TileImage': '/mstile-150x150.png',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'SNRG Labs',
   },
 }
 

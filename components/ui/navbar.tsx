@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 
 const AnimatedNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
@@ -48,13 +49,8 @@ export function Navbar() {
   }, [isOpen])
 
   const logoElement = (
-    <div className="relative w-6 h-6 flex items-center justify-center">
-      <div className="absolute inset-0 border border-gray-300 rounded-sm opacity-60"></div>
-      <div className="absolute w-2 h-2 bg-blue-400 rounded-full top-1 left-1"></div>
-      <div className="absolute w-1 h-1 bg-gray-300 rounded-full top-1 right-1"></div>
-      <div className="absolute w-1 h-1 bg-gray-300 rounded-full bottom-1 left-1"></div>
-      <div className="absolute w-2 h-0.5 bg-gray-300 bottom-1.5 right-1"></div>
-      <span className="absolute text-xs font-bold text-white">SL</span>
+    <div className="relative h-9 w-9 flex items-center justify-center rounded-[10px] border border-white/20 bg-white/[0.04] p-[5px] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]">
+      <Image src="/snrg.svg" alt="SNRG Labs" width={26} height={26} className="h-[26px] w-[26px] object-contain" priority />
     </div>
   )
 

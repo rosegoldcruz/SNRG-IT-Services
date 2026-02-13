@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Spotlight } from "@/components/ui/spotlight"
+import Image from "next/image"
 import AnimatedGradientBackground from "@/components/ui/animated-gradient-background"
 import { SparklesCore } from "@/components/ui/sparkles"
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid"
@@ -15,14 +16,9 @@ import {
   Cloud,
   PhoneCall,
   Wrench,
-  Server,
-  Globe,
   Mail,
   Phone,
   MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -75,21 +71,18 @@ export default function HomePage() {
 
               {/* Right content */}
               <div className="flex-1 relative p-8 flex items-center justify-center">
-                <div className="relative w-full h-full rounded-2xl border border-white/10 bg-gradient-to-br from-slate-950 via-blue-950/30 to-black overflow-hidden">
-                  <div className="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.35),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(34,197,94,0.25),transparent_35%)]" />
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px]" />
-                  <div className="relative z-10 h-full flex flex-col items-center justify-center gap-6 text-white">
-                    <div className="h-20 w-20 rounded-full border border-white/20 bg-white/10 flex items-center justify-center">
-                      <Shield className="h-10 w-10 text-blue-300" />
-                    </div>
-                    <div className="flex items-center gap-8 text-white/80">
-                      <Server className="h-8 w-8" />
-                      <Globe className="h-8 w-8" />
-                    </div>
-                    <p className="text-center text-sm text-neutral-300 max-w-xs">
-                      Universal Infrastructure Support for firms that can’t afford a second of downtime.
-                    </p>
-                  </div>
+                <div className="relative w-full h-full rounded-2xl border border-white/10 overflow-hidden bg-black">
+                  <video
+                    className="h-full w-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/IMG_8676.MOV" type="video/quicktime" />
+                  </video>
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/20" />
                 </div>
               </div>
             </div>
@@ -460,32 +453,15 @@ export default function HomePage() {
             {/* Company Info */}
             <div className="lg:col-span-1 space-y-6">
               <div className="space-y-4">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-[10px] border border-white/20 bg-white/[0.04] p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]">
+                  <Image src="/snrg.svg" alt="SNRG Labs" width={32} height={32} className="h-8 w-8 object-contain" />
+                </div>
                 <h3 className="text-2xl font-bold text-white">SNRG Labs</h3>
                 <p className="text-gray-300 leading-relaxed">
                   Elite Managed IT & Infrastructure for legal, medical, finance, and any business that cannot afford
                   downtime.
                 </p>
-              </div>
-
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="p-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>
+                <p className="text-sm text-gray-400">Powered by AEON: The Advanced Efficient Optimized Network</p>
               </div>
             </div>
 
