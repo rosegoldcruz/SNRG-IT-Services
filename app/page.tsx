@@ -9,6 +9,7 @@ import { Pricing } from "@/components/ui/pricing"
 import { HeroParallax } from "@/components/hero-parallax"
 import {
   CheckCircle,
+  ArrowRight,
   TrendingUp,
   Clock,
   Shield,
