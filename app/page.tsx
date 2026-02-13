@@ -312,8 +312,8 @@ export default function HomePage() {
           plans={[
             {
               name: "Professional Tier",
-              price: "1497",
-              yearlyPrice: "1197",
+              price: "669",
+              yearlyPrice: "535",
               period: "month",
               features: [
                 "Zero-Trust baseline setup and endpoint hardening",
@@ -329,8 +329,8 @@ export default function HomePage() {
             },
             {
               name: "Business Continuity",
-              price: "2997",
-              yearlyPrice: "2397",
+              price: "1289",
+              yearlyPrice: "1031",
               period: "month",
               features: [
                 "24/7 AI-driven monitoring and incident escalation",
@@ -347,8 +347,8 @@ export default function HomePage() {
             },
             {
               name: "Universal Infrastructure",
-              price: "4997",
-              yearlyPrice: "3997",
+              price: "2790",
+              yearlyPrice: "2232",
               period: "month",
               features: [
                 "Dedicated infrastructure pod for your organization",
@@ -494,19 +494,19 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold text-white">Services</h4>
               <ul className="space-y-3">
                 {[
-                  "Compliance-Grade Defense",
-                  "Cloud Orchestration",
-                  "Communication Infrastructure",
-                  "Proactive Management",
-                  "Universal Infrastructure Support",
+                  { name: "Compliance-Grade Defense", href: "/services/compliance-grade-defense" },
+                  { name: "Cloud Orchestration", href: "/services/cloud-orchestration" },
+                  { name: "Communication Infrastructure", href: "/services/communication-infrastructure" },
+                  { name: "Proactive Management", href: "/services/proactive-management" },
+                  { name: "Universal Infrastructure Support", href: "/services/universal-infrastructure-support" },
                 ].map((service) => (
-                  <li key={service}>
+                  <li key={service.name}>
                     <a
-                      href="#services"
+                      href={service.href}
                       className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                     >
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      {service}
+                      {service.name}
                     </a>
                   </li>
                 ))}
@@ -518,11 +518,9 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold text-white">Company</h4>
               <ul className="space-y-3">
                 {[
-                  { name: "About Us", href: "#" },
-                  { name: "Reliability Stories", href: "#testimonials" },
-                  { name: "Blog", href: "#" },
-                  { name: "Careers", href: "#" },
-                  { name: "Contact", href: "#contact" },
+                  { name: "About Us", href: "/about-us" },
+                  { name: "Reliability Stories", href: "/reliability-stories" },
+                  { name: "Contact", href: "/contact" },
                 ].map((item) => (
                   <li key={item.name}>
                     <a
