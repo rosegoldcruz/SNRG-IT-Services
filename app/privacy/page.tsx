@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
               </Button>
             </Link>
             <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-            <p className="text-gray-400">Last updated: December 2024</p>
+            <p className="text-gray-400">Last updated: February 2026</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
@@ -41,9 +41,9 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
                 <p className="mb-4">We use the information we collect to:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Provide and improve our AI services</li>
-                  <li>Communicate with you about our services</li>
-                  <li>Analyze usage patterns and optimize performance</li>
+                  <li>Deliver managed security and infrastructure services</li>
+                  <li>Communicate service updates, security advisories, and support notices</li>
+                  <li>Monitor performance, uptime, and service reliability</li>
                   <li>Comply with legal obligations</li>
                 </ul>
               </section>
@@ -60,8 +60,8 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
                 <p>
                   If you have any questions about this Privacy Policy, please contact us at{" "}
-                  <a href="mailto:privacy@aiagency.com" className="text-blue-400 hover:text-blue-300">
-                    privacy@aiagency.com
+                  <a href="mailto:info@snrglabs.com" className="text-blue-400 hover:text-blue-300">
+                    info@snrglabs.com
                   </a>
                 </p>
               </section>

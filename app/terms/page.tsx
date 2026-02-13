@@ -18,7 +18,7 @@ export default function TermsOfService() {
               </Button>
             </Link>
             <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-            <p className="text-gray-400">Last updated: December 2024</p>
+            <p className="text-gray-400">Last updated: February 2026</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
@@ -26,21 +26,21 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
                 <p>
-                  By accessing and using our AI services, you accept and agree to be bound by the terms and provision of
-                  this agreement.
+                  By accessing and using SNRG Labs services, you accept and agree to be bound by the terms and
+                  provisions of this agreement.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">Service Description</h2>
                 <p className="mb-4">
-                  AI Agency provides artificial intelligence solutions including but not limited to:
+                  SNRG Labs provides managed IT, security, and infrastructure services including but not limited to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>AI chatbot development and deployment</li>
-                  <li>Workflow automation systems</li>
-                  <li>AI integration services</li>
-                  <li>Custom AI solution development</li>
+                  <li>Compliance-grade security and Zero-Trust architecture</li>
+                  <li>Cloud orchestration and legacy infrastructure migration</li>
+                  <li>Communication infrastructure and call routing systems</li>
+                  <li>Proactive monitoring, remediation, and managed support</li>
                 </ul>
               </section>
 
@@ -67,8 +67,8 @@ export default function TermsOfService() {
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>
                 <p>
                   For questions about these Terms of Service, contact us at{" "}
-                  <a href="mailto:legal@aiagency.com" className="text-blue-400 hover:text-blue-300">
-                    legal@aiagency.com
+                  <a href="mailto:info@snrglabs.com" className="text-blue-400 hover:text-blue-300">
+                    info@snrglabs.com
                   </a>
                 </p>
               </section>

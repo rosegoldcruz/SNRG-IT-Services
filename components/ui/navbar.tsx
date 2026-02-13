@@ -54,13 +54,13 @@ export function Navbar() {
       <div className="absolute w-1 h-1 bg-gray-300 rounded-full top-1 right-1"></div>
       <div className="absolute w-1 h-1 bg-gray-300 rounded-full bottom-1 left-1"></div>
       <div className="absolute w-2 h-0.5 bg-gray-300 bottom-1.5 right-1"></div>
-      <span className="absolute text-xs font-bold text-white">AI</span>
+      <span className="absolute text-xs font-bold text-white">SL</span>
     </div>
   )
 
   const navLinksData = [
     { label: "Services", href: "#services" },
-    { label: "Case Studies", href: "#testimonials" },
+    { label: "Reliability", href: "#testimonials" },
   ]
 
   const loginButtonElement = (

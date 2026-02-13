@@ -5,9 +5,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'SNRG Labs | Elite Managed IT & Infrastructure',
+  description: 'Enterprise-grade managed security, cloud orchestration, and proactive infrastructure management for zero downtime operations.',
   icons: {
     icon: [
       {
