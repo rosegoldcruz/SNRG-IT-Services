@@ -49,8 +49,8 @@ export function Navbar() {
   }, [isOpen])
 
   const logoElement = (
-    <div className="relative h-9 w-9 flex items-center justify-center rounded-[10px] border border-white/20 bg-white/[0.04] p-[5px] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]">
-      <Image src="/snrg.svg" alt="SNRG Labs" width={26} height={26} className="h-[26px] w-[26px] object-contain" priority />
+    <div className="relative h-12 w-12 flex items-center justify-center">
+      <Image src="/snrg.svg" alt="SNRG Labs" width={44} height={44} className="h-11 w-11 object-contain" priority />
     </div>
   )
 
