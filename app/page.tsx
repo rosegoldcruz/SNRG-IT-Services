@@ -28,15 +28,15 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative overflow-hidden bg-black pt-32 pb-20 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4">
-          <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden border-none">
-            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+          <Card className="w-full bg-black/[0.96] relative overflow-hidden border border-white/10 rounded-2xl">
+            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
 
-            <div className="flex h-full">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center p-6 md:p-10 lg:p-12">
               {/* Left content */}
-              <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text">
+              <div className="relative z-10 flex flex-col justify-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
                   The Infrastructure of Zero Downtime.
                 </h1>
                 <p className="mt-4 text-neutral-300 max-w-lg">
@@ -70,8 +70,8 @@ export default function HomePage() {
               </div>
 
               {/* Right content */}
-              <div className="flex-1 relative p-8 flex items-center justify-center">
-                <div className="relative w-full h-full rounded-2xl border border-white/10 overflow-hidden bg-black">
+              <div className="relative flex items-center justify-center">
+                <div className="relative w-full aspect-[16/10] rounded-2xl border border-white/10 overflow-hidden bg-black">
                   <video
                     className="h-full w-full object-cover"
                     autoPlay
@@ -79,8 +79,10 @@ export default function HomePage() {
                     loop
                     playsInline
                     preload="metadata"
+                    poster="/hero-video-poster.jpg"
                   >
-                    <source src="/IMG_8676.MOV" type="video/quicktime" />
+                    <source src="/hero-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
                   </video>
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/20" />
                 </div>
