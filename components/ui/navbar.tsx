@@ -2,7 +2,17 @@
 
 import type React from "react"
 import Image from "next/image"
+import Link from "next/link"
+import { ChevronDown } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
+
+const SERVICES = [
+  { name: "Compliance-Grade Defense", href: "/services/compliance-grade-defense" },
+  { name: "Cloud Orchestration", href: "/services/cloud-orchestration" },
+  { name: "Communication Infrastructure", href: "/services/communication-infrastructure" },
+  { name: "Proactive Management", href: "/services/proactive-management" },
+  { name: "Universal Infrastructure Support", href: "/services/universal-infrastructure-support" },
+]
 
 const AnimatedNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const defaultTextColor = "text-gray-300"
@@ -16,6 +26,29 @@ const AnimatedNavLink = ({ href, children }: { href: string; children: React.Rea
         <span className={hoverTextColor}>{children}</span>
       </div>
     </a>
+  )
+}
+
+const ServicesDropdown = () => {
+  return (
+    <div className="group relative">
+      <button className="flex items-center gap-1 text-sm text-gray-300 hover:text-white transition-colors" aria-label="Open services menu">
+        <span>Services</span>
+        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+      </button>
+
+      <div className="invisible opacity-0 translate-y-1 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto absolute left-0 top-full mt-3 w-72 rounded-lg border border-white/10 bg-[#0a0a0a] p-2 shadow-2xl z-50 transition-all duration-200">
+        {SERVICES.map((service) => (
+          <Link
+            key={service.href}
+            href={service.href}
+            className="block rounded-md px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all"
+          >
+            {service.name}
+          </Link>
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -55,7 +88,6 @@ export function Navbar() {
   )
 
   const navLinksData = [
-    { label: "Services", href: "#services" },
     { label: "Reliability", href: "#testimonials" },
   ]
 
@@ -98,6 +130,7 @@ export function Navbar() {
         <div className="flex items-center">{logoElement}</div>
 
         <nav className="hidden sm:flex items-center space-x-4 sm:space-x-6 text-sm">
+          <ServicesDropdown />
           {navLinksData.map((link) => (
             <AnimatedNavLink key={link.href} href={link.href}>
               {link.label}
@@ -149,6 +182,16 @@ export function Navbar() {
                        ${isOpen ? "max-h-[1000px] opacity-100 pt-4" : "max-h-0 opacity-0 pt-0 pointer-events-none"}`}
       >
         <nav className="flex flex-col items-center space-y-4 text-base w-full">
+          <div className="w-full text-center text-gray-300">Services</div>
+          {SERVICES.map((service) => (
+            <a
+              key={service.href}
+              href={service.href}
+              className="text-gray-300 hover:text-white transition-colors w-full text-center"
+            >
+              {service.name}
+            </a>
+          ))}
           {navLinksData.map((link) => (
             <a
               key={link.href}
