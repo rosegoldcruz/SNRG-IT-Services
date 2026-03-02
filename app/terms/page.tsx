@@ -17,59 +17,72 @@ export default function TermsOfService() {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-            <p className="text-gray-400">Last updated: February 2026</p>
+            <h1 className="text-4xl font-bold text-white mb-4">SNRG Labs Digital Infrastructure Subscription Terms</h1>
+            <p className="text-gray-400">Effective Date: __________</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
             <div className="space-y-8 text-gray-300">
+              <p>
+                By subscribing to SNRG Labs services, Client agrees to the following:
+              </p>
+
               <section>
-                <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
-                <p>
-                  By accessing and using SNRG Labs services, you accept and agree to be bound by the terms and
-                  provisions of this agreement.
+                <h2 className="text-2xl font-bold text-white mb-4">1. Scope of Services</h2>
+                <p className="mb-4">Subscription includes:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Website hosting & uptime monitoring</li>
+                  <li>DNS and domain configuration management</li>
+                  <li>Google Workspace email setup & support</li>
+                  <li>Basic website updates (menus, hours, content edits)</li>
+                  <li>Infrastructure oversight and technical coordination</li>
+                </ul>
+                <p className="mt-4">
+                  Major redesigns, rebuilds, custom development, or advanced integrations are not included unless separately agreed.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-white mb-4">Service Description</h2>
-                <p className="mb-4">
-                  SNRG Labs provides managed IT, security, and infrastructure services including but not limited to:
+                <h2 className="text-2xl font-bold text-white mb-4">2. Ownership</h2>
+                <p className="mb-2">
+                  All domains, email accounts, hosting configurations, and digital assets remain the sole property of the Client.
                 </p>
+                <p>
+                  SNRG Labs does not retain ownership of Client assets.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">3. Payment Terms</h2>
+                <p className="mb-2">Subscription fee: $150/month</p>
+                <p className="mb-2">Billing is automatic via Stripe.</p>
+                <p>
+                  Failure to pay may result in suspension of management services. Client retains ownership of all digital assets.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-white mb-4">4. Termination</h2>
+                <p className="mb-4">Client may cancel at any time.</p>
+                <p className="mb-2">Upon cancellation:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Compliance-grade security and Zero-Trust architecture</li>
-                  <li>Cloud orchestration and legacy infrastructure migration</li>
-                  <li>Communication infrastructure and call routing systems</li>
-                  <li>Proactive monitoring, remediation, and managed support</li>
+                  <li>Administrative access is transferred</li>
+                  <li>Ongoing management services cease</li>
+                  <li>No assets are withheld</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-white mb-4">User Responsibilities</h2>
-                <p className="mb-4">You agree to:</p>
+                <h2 className="text-2xl font-bold text-white mb-4">5. Liability</h2>
+                <p className="mb-4">SNRG Labs is not responsible for:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Provide accurate and complete information</li>
-                  <li>Use our services in compliance with applicable laws</li>
-                  <li>Not interfere with or disrupt our services</li>
-                  <li>Maintain the confidentiality of your account credentials</li>
+                  <li>Third-party outages</li>
+                  <li>Client credential misuse</li>
+                  <li>Security issues caused by weak passwords</li>
+                  <li>Platform-level failures beyond SNRG Labs control</li>
                 </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
-                <p>
-                  Our liability for any claims arising from the use of our services shall not exceed the amount paid by
-                  you for the specific service giving rise to the claim.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>
-                <p>
-                  For questions about these Terms of Service, contact us at{" "}
-                  <a href="mailto:info@snrglabs.com" className="text-blue-400 hover:text-blue-300">
-                    info@snrglabs.com
-                  </a>
+                <p className="mt-4">
+                  Client agrees to enable two-factor authentication on all administrative accounts.
                 </p>
               </section>
             </div>
