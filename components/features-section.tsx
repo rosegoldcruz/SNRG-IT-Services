@@ -2,29 +2,29 @@
 
 import type React from "react"
 
-import { PhoneCall, Globe, Users, Headset, Sparkles } from "lucide-react"
+import { PhoneCall, MapPinned, BarChart3, Workflow, Sparkles } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
+    icon: Workflow,
+    title: "CRM Infrastructure",
+    description: "GoHighLevel setup, pipeline design, automation workflows, and lead routing.",
+  },
+  {
     icon: PhoneCall,
-    title: "Tier-1 VoIP",
-    description: "High-fidelity global calling powered by a redundant Tier-1 carrier network.",
+    title: "Lead Capture Systems",
+    description: "High-conversion landing pages, call tracking, form integrations, and SMS response.",
   },
   {
-    icon: Globe,
-    title: "Intelligent Routing",
-    description: "Orchestrate every call to the best available rep based on intent, language, and lead priority.",
+    icon: MapPinned,
+    title: "Local Visibility",
+    description: "Google Business Profile optimization, local SEO, and map ranking systems.",
   },
   {
-    icon: Users,
-    title: "Supervisor Live HUD",
-    description: "Monitor queues, listen in, and coach agents in real-time without interrupting the flow.",
-  },
-  {
-    icon: Headset,
-    title: "Unified Agent Workspace",
-    description: "Every script, lead note, and pipeline update in one fast, distraction-free interface.",
+    icon: BarChart3,
+    title: "Revenue Tracking",
+    description: "Pipeline analytics, conversion tracking, and lead attribution tied to real revenue.",
   },
 ]
 
@@ -95,14 +95,13 @@ export function FeaturesSection() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <div className="flex items-center justify-center gap-2 text-sm text-accent">
             <Sparkles className="h-4 w-4" />
-            <span className="font-mono uppercase tracking-wider">Infrastructure as Code</span>
+            <span className="font-mono uppercase tracking-wider">What We Install</span>
           </div>
           <h2 className="mt-4 font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-            A platform designed for elite outbound performance
+            Revenue Infrastructure built for contractor workflows
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            AEONDial removes the technical friction from telephony operations so you can focus on the conversations
-            that actually close.
+            Practical CRM and automation systems designed for home service companies doing $500k–$10M/year.
           </p>
         </div>
 

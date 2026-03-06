@@ -2,34 +2,34 @@
 
 const testimonials = [
   {
-    company: "Kingpin Install",
+    company: "Kingpin Roofing",
     quote:
-      "We were tired of losing leads to dead air and slow follow-ups. AEONDial’s predictive dialer turned our outbound into a machine. Now, my guys are on live calls 90% of the day instead of staring at a keypad. It’s the closest thing to a 'money' button I’ve found.",
-    byline: "Lead Coordinator, Kingpin Install",
+      "We were losing calls after-hours and missing form submissions. SNRG installed our CRM pipeline and automated SMS response, and now every lead gets touched immediately.",
+    byline: "Operations Lead, Kingpin Roofing",
   },
   {
     company: "G3 Home Remodels",
     quote:
-      "Telephony used to be our biggest headache—hardware issues, dropped calls, and zero sync with our lead data. With AEONDial, we initialized our entire sales floor in minutes. The AI Whisper coaching is like having my best closer in every agent's ear at the same time.",
-    byline: "Management, G3 Home Remodels",
+      "Before SNRG, we had no real pipeline visibility. Now we can see where each lead came from, how fast we responded, and which campaigns actually produced closed jobs.",
+    byline: "General Manager, G3 Home Remodels",
   },
   {
-    company: "Reface Kit",
+    company: "Elite HVAC",
     quote:
-      "The scalability is what sold us. We started as a one-man army and scaled to a full-service operation without changing our tech stack once. AEONDial isn't just a phone system; it's the core of how we communicate with every customer.",
-    byline: "Operations, Reface Kit",
+      "SNRG connected call tracking, forms, and our GoHighLevel pipeline. We stopped guessing and started managing a real revenue system.",
+    byline: "Owner, Elite HVAC",
   },
   {
-    company: "Raw2Recruited",
+    company: "Precision Cabinets",
     quote:
-      "Recruiting is a numbers game, and AEONDial just gave us an unfair advantage. The speed at which we can cycle through candidates without losing that 'personal touch' thanks to the AI Whisper coaching is insane. We've doubled our daily placements since making the switch.",
-    byline: "Founder, Raw2Recruited",
+      "Our speed-to-lead changed overnight. Automated response plus lead routing gave our team a repeatable process that closes more jobs every month.",
+    byline: "Sales Director, Precision Cabinets",
   },
   {
-    company: "American MPS",
+    company: "Rapid Restore",
     quote:
-      "When you're managing complex operations, you can't afford technical friction. AEONDial is the first telephony stack that actually stays out of the way and lets us work. It’s enterprise firepower that handles our heaviest days without breaking a sweat.",
-    byline: "Operations, American MPS",
+      "SNRG installed the infrastructure that made our marketing measurable. We now know exactly which sources generate revenue and where leads were leaking.",
+    byline: "Founder, Rapid Restore",
   },
 ]
 
@@ -40,7 +40,7 @@ export function TestimonialsSection() {
     <section className="py-16 border-y border-border/40 bg-card/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-mono text-3xl font-bold tracking-tight sm:text-4xl">
-          Trusted by the guys who actually close.
+          Trusted by home service teams that need measurable revenue.
         </h2>
 
         <div className="relative mt-10 marquee">

@@ -1,20 +1,20 @@
 import Link from "next/link"
 
 const productLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Enterprise", href: "#enterprise" },
+  { label: "Revenue Engine", href: "#revenue-engine" },
+  { label: "What We Install", href: "#features" },
+  { label: "Revenue Tracking", href: "#tracking" },
 ]
 
 const supportLinks = [
-  { label: "Contact Support", href: "mailto:support@aeondial.com" },
-  { label: "Status", href: "#" },
+  { label: "Book System Review", href: "/contact" },
+  { label: "Call Now", href: "tel:+14803648205" },
 ]
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
-  { label: "Security / Compliance (STIR/SHAKEN)", href: "#" },
+  { label: "Revenue Infrastructure", href: "/services" },
 ]
 
 export function Footer() {
@@ -25,12 +25,12 @@ export function Footer() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground">
-                <span className="text-sm font-bold text-background">A</span>
+                <span className="text-sm font-bold text-background">S</span>
               </div>
-              <span className="text-lg font-semibold tracking-tight font-mono">AEONDial</span>
+              <span className="text-lg font-semibold tracking-tight font-mono">SNRG Labs</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Enterprise-grade telephony in a single tab.
+              Revenue infrastructure for home service businesses.
             </p>
 
             <div>
@@ -76,10 +76,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border/40 pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} AEONDial. All rights reserved.
+            © {new Date().getFullYear()} SNRG Labs. All rights reserved.
           </p>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            Powered by Aeon, the Advanced Efficient Optimized Network.
+            SNRG Labs installs the infrastructure that turns marketing into measurable revenue.
           </p>
         </div>
       </div>

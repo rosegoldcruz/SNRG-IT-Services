@@ -38,7 +38,7 @@ function AutomatedPulseFlow() {
 
           <text x="120" y="80" textAnchor="middle" fill="#d4d4d8" fontSize="13">Facebook Ads</text>
           <text x="120" y="170" textAnchor="middle" fill="#d4d4d8" fontSize="13">Web Leads</text>
-          <text x="380" y="125" textAnchor="middle" fill="#fb923c" fontSize="14">AEONDial Hub</text>
+          <text x="380" y="125" textAnchor="middle" fill="#fb923c" fontSize="14">SNRG CRM Hub</text>
           <text x="630" y="125" textAnchor="middle" fill="#22c55e" fontSize="14">Sold</text>
 
           <path d="M200 75 C 245 75, 250 110, 290 120" fill="none" stroke="#3f3f46" strokeWidth="3" />

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import {
@@ -13,7 +14,7 @@ import {
   Clock,
 } from "lucide-react"
 
-const DASHBOARD_ANIMATION_KEY = "aeondial-dashboard-animations-played"
+const DASHBOARD_ANIMATION_KEY = "snrg-revenue-dashboard-animations-played"
 
 interface GridDot {
   x: number
@@ -45,8 +46,8 @@ export function HeroSection() {
   const dashboardRef = useRef<HTMLDivElement>(null)
   const [dashboardAnimated, setDashboardAnimated] = useState(false)
 
-  const text1 = "Talk more."
-  const text2 = "Close faster."
+  const text1 = "Install the System"
+  const text2 = "That Turns Leads Into Revenue"
 
   useEffect(() => {
     let currentIndex = 0
@@ -419,14 +420,14 @@ export function HeroSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Now in public beta
+            Revenue Infrastructure for Home Service Businesses
           </div>
 
           <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl relative">
             <span className="invisible" aria-hidden="true">
-              <span className="text-balance">Talk more.</span>
+              <span className="text-balance">Install the System</span>
               <br />
-              <span className="text-balance">Close faster.</span>
+              <span className="text-balance">That Turns Leads Into Revenue</span>
             </span>
 
             <span className="absolute inset-0 flex flex-col items-center">
@@ -449,17 +450,20 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-4xl text-lg text-muted-foreground sm:text-xl lg:text-2xl md:whitespace-nowrap">
-            The world’s first AI-native telephony stack for teams of 1 to 1,000.
+          <p className="mx-auto mt-6 max-w-5xl text-lg text-muted-foreground sm:text-xl lg:text-2xl">
+            We build Revenue Engine CRM systems for home service businesses using GoHighLevel, automated lead
+            pipelines, call tracking, and local SEO — so every call, form, and message turns into measurable revenue.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="w-full sm:w-auto">
-              Get started
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" className="w-full sm:w-auto" asChild>
+              <Link href="/contact">
+                Book a System Review
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
-              View documentation
+            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent" asChild>
+              <Link href="#revenue-engine">See How It Works</Link>
             </Button>
           </div>
 
@@ -468,10 +472,10 @@ export function HeroSection() {
               <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-accent/20 shadow-[0_0_24px_rgba(249,115,22,0.35)]">
                 <Zap className="h-4 w-4 text-accent" />
               </div>
-              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Speed</p>
-              <h3 className="mt-2 text-lg font-semibold">Predictive Power-Dialing</h3>
+              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">CRM Infrastructure</p>
+              <h3 className="mt-2 text-lg font-semibold">GoHighLevel + Pipeline Design</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Eliminate dead air with smart sequencing that keeps your pipeline moving without the manual grind.
+                Complete CRM setup, lead routing, and automation workflows installed for contractor teams.
               </p>
             </div>
 
@@ -479,10 +483,10 @@ export function HeroSection() {
               <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-accent/20 shadow-[0_0_24px_rgba(249,115,22,0.35)]">
                 <Brain className="h-4 w-4 text-accent" />
               </div>
-              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Intelligence</p>
-              <h3 className="mt-2 text-lg font-semibold">Live Whisper Coaching</h3>
+              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Lead Capture Systems</p>
+              <h3 className="mt-2 text-lg font-semibold">Call Tracking + SMS Follow-Up</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                An AI overlay that listens, learns, and prompts your next move so you never miss a beat.
+                Capture every form and inbound call, then trigger immediate automated responses.
               </p>
             </div>
 
@@ -490,10 +494,10 @@ export function HeroSection() {
               <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-accent/20 shadow-[0_0_24px_rgba(249,115,22,0.35)]">
                 <ArrowUpRight className="h-4 w-4 text-accent" />
               </div>
-              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Scale</p>
-              <h3 className="mt-2 text-lg font-semibold">Infinite Elasticity</h3>
+              <p className="font-mono text-sm font-semibold uppercase tracking-wider text-accent">Revenue Tracking</p>
+              <h3 className="mt-2 text-lg font-semibold">Know Where Every Dollar Comes From</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                From a solo-closer to a 1,000-seat floor—AEONDial grows exactly as fast as you do.
+                Track lead source, contact speed, pipeline movement, and closed-job revenue in one dashboard.
               </p>
             </div>
           </div>
@@ -511,16 +515,16 @@ export function HeroSection() {
                     <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
                     <div className="h-3 w-3 rounded-full bg-green-500/80" />
                   </div>
-                  <span className="text-xs text-muted-foreground font-mono">AEONDial dashboard</span>
+                  <span className="text-xs text-muted-foreground font-mono">SNRG Revenue Engine dashboard</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Globe className="h-3 w-3" />
-                    <span>Active Lines</span>
+                    <span>Active Leads</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Clock className="h-3 w-3" />
-                    <span>Call Quality: Excellent</span>
+                    <span>Response Speed: Excellent</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
@@ -672,7 +676,7 @@ export function HeroSection() {
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium">Funnel</h3>
                     <span className="rounded-md border border-border/60 px-2 py-0.5 text-[10px] text-muted-foreground">
-                      AEON Pipeline
+                      Revenue Pipeline
                     </span>
                   </div>
                   <div className="mb-4 flex items-end gap-2">
@@ -707,7 +711,7 @@ export function HeroSection() {
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium">Stage Distribution</h3>
                     <span className="rounded-md border border-border/60 px-2 py-0.5 text-[10px] text-muted-foreground">
-                      AEON Pipeline
+                      Revenue Pipeline
                     </span>
                   </div>
                   <div className="mb-4 flex items-end gap-2">

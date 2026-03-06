@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function CTASection() {
   return (
@@ -23,19 +24,20 @@ export function CTASection() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-            Ready to start closing?
+            Get Your Revenue Engine Installed
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Join thousands of teams driving more conversations and faster closes with AEONDial. Start your free trial
-            today.
+            Book a 15-minute system review and we’ll show you where leads are leaking from your current setup.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="w-full sm:w-auto">
-              Start free trial
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" className="w-full sm:w-auto" asChild>
+              <Link href="/contact">
+                Book a 15-minute system review
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
-              Talk to sales
+            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent" asChild>
+              <Link href="#revenue-engine">See How It Works</Link>
             </Button>
           </div>
         </div>
