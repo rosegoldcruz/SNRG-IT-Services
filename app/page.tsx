@@ -2,9 +2,21 @@ import Link from "next/link"
 
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
+import { StatsSection } from "@/components/stats-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { FeaturesSection } from "@/components/features-section"
+import { DeveloperExperience } from "@/components/developer-experience"
+import { CodeSection } from "@/components/code-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+const leakPoints = [
+  "Leads falling through the cracks",
+  "Slow response times after calls and forms",
+  "Disconnected systems between ads, site, and CRM",
+  "No visibility into where revenue comes from",
+]
 
 const aboutServices = [
   "Website development",
@@ -68,6 +80,48 @@ export default function HomePage() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroSection />
+      <StatsSection />
+      <TestimonialsSection />
+
+      <section id="problem" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+            <div className="space-y-4">
+              <h2 className="font-mono text-3xl font-bold tracking-tight sm:text-4xl">Where Leads Leak</h2>
+              <p className="text-muted-foreground">
+                Most businesses don’t have a demand problem. They have a systems problem.
+              </p>
+              <div className="grid gap-3">
+                {leakPoints.map((point) => (
+                  <div key={point} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/50 px-4 py-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+                    <p>{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Card className="border-border/60 bg-card/50 text-foreground shadow-none">
+              <CardHeader>
+                <CardTitle className="text-xl">Pipeline Visibility + Conversion Tracking</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-muted-foreground">
+                <p>
+                  We install analytics, ad tracking, CRM integrations, and call infrastructure so you can see where
+                  leads come from, how quickly they’re contacted, and which ones turn into customers.
+                </p>
+                <div className="rounded-lg border border-border/60 bg-background/50 p-4 text-sm">
+                  <p className="text-foreground">Traffic → Website → Lead Capture → CRM → Follow-Up → Closed Customer</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <FeaturesSection />
+      <DeveloperExperience />
+      <CodeSection />
 
       <section id="about" className="border-y border-border/40 bg-card/20 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

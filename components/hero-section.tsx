@@ -408,7 +408,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-5xl text-center min-h-[78vh] flex flex-col justify-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-secondary/50 px-4 py-1.5 text-sm text-muted-foreground">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
@@ -417,7 +417,7 @@ export function HeroSection() {
             Web Development + Lead Systems
           </div>
 
-          <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl relative">
+          <h1 className="font-mono text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl relative">
             <span className="invisible" aria-hidden="true">
               <span className="text-balance">Websites That Drive Real Business</span>
             </span>
@@ -434,11 +434,6 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-5xl text-lg text-muted-foreground sm:text-xl lg:text-2xl">
-            SNRG Labs designs and builds modern business websites and installs the systems that turn traffic into
-            real leads — including analytics, ad tracking, CRM integrations, and call infrastructure.
-          </p>
-
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <Link href="/contact">
@@ -450,6 +445,13 @@ export function HeroSection() {
               <Link href="#services">View Services</Link>
             </Button>
           </div>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-5xl text-center" id="hero-support">
+          <p className="mx-auto max-w-5xl text-lg text-muted-foreground sm:text-xl lg:text-2xl">
+            SNRG Labs designs and builds modern business websites and installs the systems that turn traffic into
+            real leads — including analytics, ad tracking, CRM integrations, and call infrastructure.
+          </p>
 
           <div className="mx-auto mt-10 grid max-w-5xl gap-4 text-left sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
