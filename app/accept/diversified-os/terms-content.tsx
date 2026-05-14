@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 
-const STRIPE_KICKOFF_LINK = 'https://buy.stripe.com/4gM6oA0o74fGe689g3dnW09'
+const KICKOFF_PAYMENT_LINK = 'https://buy.stripe.com/4gM6oA0o74fGe689g3dnW09'
 
 export function DiversifiedAcceptanceContent() {
   const [isAccepted, setIsAccepted] = useState(false)
@@ -135,7 +135,7 @@ export function DiversifiedAcceptanceContent() {
                   variant="accent"
                   disabled={!isAccepted}
                   onClick={() => {
-                    window.location.href = STRIPE_KICKOFF_LINK
+                    window.location.assign(KICKOFF_PAYMENT_LINK)
                   }}
                   className="w-full sm:w-auto"
                 >
