@@ -1,14 +1,43 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
+import { JsonLd } from "@/components/JsonLd"
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Contact SNRG Labs to discuss operational platforms, automation systems, and client acquisition infrastructure for your business.',
+  alternates: {
+    canonical: 'https://snrglabs.com/contact',
+  },
+}
+
+const contactStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact SNRG Labs',
+  url: 'https://snrglabs.com/contact',
+  description:
+    'Reach SNRG Labs for operational platform architecture, automation system deployment, and revenue growth support.',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'SNRG Labs',
+    url: 'https://snrglabs.com',
+    telephone: '+1-480-364-8205',
+    email: 'info@snrglabs.com',
+    areaServed: 'United States',
+  },
+}
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-black">
+      <JsonLd data={contactStructuredData} />
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -76,7 +105,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

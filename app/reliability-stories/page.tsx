@@ -1,7 +1,17 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'Reliability Stories',
+  description:
+    'Read reliability stories from SNRG Labs clients using uptime-first infrastructure and proactive systems management.',
+  alternates: {
+    canonical: 'https://snrglabs.com/reliability-stories',
+  },
+}
 
 const stories = [
   {
@@ -29,7 +39,7 @@ export default function ReliabilityStoriesPage() {
     <div className="min-h-screen bg-black">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -57,7 +67,7 @@ export default function ReliabilityStoriesPage() {
             ))}
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

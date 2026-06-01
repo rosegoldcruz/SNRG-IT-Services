@@ -1,7 +1,17 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description:
+    'Review SNRG Labs terms of service for project work, recurring services, ownership, liability, and billing terms.',
+  alternates: {
+    canonical: 'https://snrglabs.com/terms',
+  },
+}
 
 export default function TermsOfService() {
   const anchors = [
@@ -29,7 +39,7 @@ export default function TermsOfService() {
     <div className="min-h-screen bg-black">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <Link href="/">
@@ -296,7 +306,7 @@ export default function TermsOfService() {
             </section>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

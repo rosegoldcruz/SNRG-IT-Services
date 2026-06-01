@@ -1,14 +1,24 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Shield, Cloud, PhoneCall, Wrench } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Learn how SNRG Labs designs operational platforms, security-forward automation, and revenue systems for high-reliability businesses.',
+  alternates: {
+    canonical: 'https://snrglabs.com/about-us',
+  },
+}
 
 export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -68,7 +78,7 @@ export default function AboutUsPage() {
             </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

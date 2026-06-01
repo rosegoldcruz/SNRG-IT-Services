@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const productLinks = [
   { label: "About", href: "#about" },
@@ -29,9 +30,9 @@ export function Footer() {
         {/* outer glow halo */}
         <div className="absolute h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.22)_0%,rgba(6,182,212,0.12)_45%,transparent_70%)] blur-3xl" />
         {/* the logo itself */}
-        <img
+        <Image
           src="/snrg.svg"
-          alt=""
+          alt="SNRG Labs globe watermark"
           width={640}
           height={640}
           className="h-[640px] w-[640px] opacity-[0.28]"

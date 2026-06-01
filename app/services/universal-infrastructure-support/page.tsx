@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowLeft, MonitorCog } from "lucide-react"
 import { Navbar } from "@/components/ui/navbar"
@@ -5,13 +6,22 @@ import { Button } from "@/components/ui/button"
 import { ComplianceBadge } from "@/components/ui/compliance-badge"
 import { KineticHeading } from "@/components/ui/kinetic-heading"
 
+export const metadata: Metadata = {
+  title: 'Universal Infrastructure Support Service',
+  description:
+    'Universal infrastructure support from SNRG Labs across cloud, endpoint, voice, compliance, and network operations.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services/universal-infrastructure-support',
+  },
+}
+
 export default function UniversalInfrastructureSupportPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#0F172A" }}>
       <Navbar />
       <ComplianceBadge />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -66,7 +76,7 @@ export default function UniversalInfrastructureSupportPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

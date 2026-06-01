@@ -1,9 +1,19 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowLeft, Activity } from "lucide-react"
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ComplianceBadge } from "@/components/ui/compliance-badge"
 import { KineticHeading } from "@/components/ui/kinetic-heading"
+
+export const metadata: Metadata = {
+  title: 'Proactive Management Service',
+  description:
+    'Proactive management services from SNRG Labs using telemetry, predictive maintenance, and AI-assisted remediation.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services/proactive-management',
+  },
+}
 
 const telemetry = ["CPU Drift", "Disk Latency", "Packet Loss", "Memory Volatility", "Thermal Deviation"]
 
@@ -13,7 +23,7 @@ export default function ProactiveManagementPage() {
       <Navbar />
       <ComplianceBadge />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -65,7 +75,7 @@ export default function ProactiveManagementPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

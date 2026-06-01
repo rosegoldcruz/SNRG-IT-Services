@@ -1,9 +1,11 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowRight, BarChart3, Bot, Globe, PhoneCall } from "lucide-react"
 
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { JsonLd } from "@/components/JsonLd"
 
 const serviceGroups = [
   {
@@ -38,9 +40,74 @@ const setupPricing = [
   { label: "Ad Tracking & Pixel Integration", price: "$300 – $700" },
 ]
 
+export const metadata: Metadata = {
+  title: 'Services',
+  description:
+    'Explore SNRG Labs services including operational platforms, automation systems, revenue growth systems, and client acquisition infrastructure.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services',
+  },
+}
+
+const servicesStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Operational Platforms',
+    provider: {
+      '@type': 'Organization',
+      name: 'SNRG Labs',
+      url: 'https://snrglabs.com',
+    },
+    areaServed: 'United States',
+    serviceType: 'Operational Platforms',
+    description: 'Operational platform architecture for lead routing, business workflows, and execution visibility.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Automation Systems',
+    provider: {
+      '@type': 'Organization',
+      name: 'SNRG Labs',
+      url: 'https://snrglabs.com',
+    },
+    areaServed: 'United States',
+    serviceType: 'Automation Systems',
+    description: 'CRM and workflow automation systems that reduce manual work and increase response speed.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Revenue Growth',
+    provider: {
+      '@type': 'Organization',
+      name: 'SNRG Labs',
+      url: 'https://snrglabs.com',
+    },
+    areaServed: 'United States',
+    serviceType: 'Revenue Growth Systems',
+    description: 'Revenue growth systems built around conversion tracking, follow-up velocity, and pipeline visibility.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Client Acquisition',
+    provider: {
+      '@type': 'Organization',
+      name: 'SNRG Labs',
+      url: 'https://snrglabs.com',
+    },
+    areaServed: 'United States',
+    serviceType: 'Client Acquisition Systems',
+    description: 'Client acquisition systems connecting websites, lead capture, telephony, and CRM follow-up.',
+  },
+]
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <JsonLd data={servicesStructuredData} />
       <Navbar />
 
       <main className="pt-40 pb-20">

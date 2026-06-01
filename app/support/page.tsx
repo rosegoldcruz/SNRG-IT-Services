@@ -1,14 +1,24 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Mail, Phone, CreditCard, LifeBuoy } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'Support',
+  description:
+    'Get technical and billing support from SNRG Labs for managed systems, hosting, infrastructure, and account operations.',
+  alternates: {
+    canonical: 'https://snrglabs.com/support',
+  },
+}
 
 export default function SupportPage() {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <Link href="/">
@@ -76,7 +86,7 @@ export default function SupportPage() {
             </p>
           </section>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

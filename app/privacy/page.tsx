@@ -1,14 +1,24 @@
+import type { Metadata } from 'next'
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description:
+    'Read the SNRG Labs privacy policy covering data collection, processing, retention, and security for service delivery.',
+  alternates: {
+    canonical: 'https://snrglabs.com/privacy',
+  },
+}
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <Link href="/">
@@ -114,7 +124,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

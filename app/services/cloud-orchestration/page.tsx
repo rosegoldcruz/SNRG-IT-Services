@@ -1,9 +1,19 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ComplianceBadge } from "@/components/ui/compliance-badge"
 import { KineticHeading } from "@/components/ui/kinetic-heading"
+
+export const metadata: Metadata = {
+  title: 'Cloud Orchestration Service',
+  description:
+    'Cloud orchestration services from SNRG Labs for resilient infrastructure migration, persistence, and operational continuity.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services/cloud-orchestration',
+  },
+}
 
 const nodes = ["US-WEST", "US-CENTRAL", "US-EAST", "EU-PRIMARY", "APAC-EDGE"]
 
@@ -13,7 +23,7 @@ export default function CloudOrchestrationPage() {
       <Navbar />
       <ComplianceBadge />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -62,7 +72,7 @@ export default function CloudOrchestrationPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

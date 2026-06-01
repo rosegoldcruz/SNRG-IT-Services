@@ -1,9 +1,19 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowLeft, ShieldAlert } from "lucide-react"
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ComplianceBadge } from "@/components/ui/compliance-badge"
 import { KineticHeading } from "@/components/ui/kinetic-heading"
+
+export const metadata: Metadata = {
+  title: 'Compliance-Grade Defense Service',
+  description:
+    'Compliance-grade defense services from SNRG Labs including zero-trust architecture, encryption policy, and threat containment workflows.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services/compliance-grade-defense',
+  },
+}
 
 const threatEvents = [
   { ip: "185.91.77.10", region: "Unknown Region", status: "BLOCKED" },
@@ -18,7 +28,7 @@ export default function ComplianceGradeDefensePage() {
       <Navbar />
       <ComplianceBadge />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -67,7 +77,7 @@ export default function ComplianceGradeDefensePage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

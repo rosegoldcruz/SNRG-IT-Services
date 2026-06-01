@@ -1,9 +1,19 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { ArrowLeft, PhoneCall } from "lucide-react"
 import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ComplianceBadge } from "@/components/ui/compliance-badge"
 import { KineticHeading } from "@/components/ui/kinetic-heading"
+
+export const metadata: Metadata = {
+  title: 'Communication Infrastructure Service',
+  description:
+    'Communication infrastructure services from SNRG Labs for call routing, AI triage, and uptime-first client interaction systems.',
+  alternates: {
+    canonical: 'https://snrglabs.com/services/communication-infrastructure',
+  },
+}
 
 const flow = ["Client Call", "AI Triage", "Priority Routing", "Assigned Attorney"]
 
@@ -13,7 +23,7 @@ export default function CommunicationInfrastructurePage() {
       <Navbar />
       <ComplianceBadge />
 
-      <div className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24">
         <div className="max-w-5xl mx-auto space-y-10">
           <div>
             <Link href="/">
@@ -61,7 +71,7 @@ export default function CommunicationInfrastructurePage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

@@ -13,32 +13,61 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: 'System Native Revenue Growth | SNRG Labs',
+  title: {
+    default: 'SNRG Labs | Systems Native Revenue Growth - Arizona',
+    template: '%s | SNRG Labs',
+  },
   description:
-    'Your leads are coming in. Your follow-up isn\'t. SNRG Labs builds CRM automation, power dialers, and revenue systems for businesses done leaving money on the table.',
+    'SNRG Labs builds operational platforms, automation systems, and revenue growth engines for businesses. Automate. Synergize. Monetize.',
+  keywords: [
+    'systems automation arizona',
+    'revenue growth systems',
+    'operational platform',
+    'business automation',
+    'SNRG Labs',
+    'client acquisition systems',
+    'automate synergize monetize',
+  ],
+  metadataBase: new URL('https://snrglabs.com'),
+  alternates: {
+    canonical: '/',
+  },
   manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     url: 'https://snrglabs.com',
-    title: 'Your Leads Are Coming In. Your Follow-Up Isn\'t.',
+    title: 'SNRG Labs | Systems Native Revenue Growth',
     description:
-      'We don\'t build websites — we build the machine behind your revenue. CRM automation, dialers, lead capture, and follow-up systems. Tell me what\'s broken. I\'ll build the fix.',
+      'SNRG Labs builds operational platforms, automation systems, and revenue growth engines for businesses.',
     siteName: 'SNRG Labs',
     images: [
       {
-        url: 'https://snrglabs.com/hero-video-poster.jpg',
-        width: 1280,
-        height: 700,
-        alt: 'SNRG Labs — System Native Revenue Growth',
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SNRG Labs - Systems Native Revenue Growth',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Your Leads Are Coming In. Your Follow-Up Isn\'t.',
+    title: 'SNRG Labs | Systems Native Revenue Growth',
     description:
-      'We don\'t build websites — we build the machine behind your revenue. CRM automation, dialers, lead capture, and follow-up systems. Tell me what\'s broken. I\'ll build the fix.',
-    images: ['https://snrglabs.com/hero-video-poster.jpg'],
+      'SNRG Labs builds operational platforms, automation systems, and revenue growth engines for businesses.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
   },
   icons: {
     icon: [
